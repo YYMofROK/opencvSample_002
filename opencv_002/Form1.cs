@@ -101,6 +101,8 @@ namespace opencv_002
                 Cv2.Rectangle(frame_img_source_01, faces[faceCnt], Scalar.YellowGreen, 2);
 
             }
+            
+            Cv2.Flip(frame_img_source_01, frame_img_source_01, FlipMode.Y); // 좌우반전
             pictureBox1.Image = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(frame_img_source_01);
         }
 
